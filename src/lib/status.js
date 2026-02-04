@@ -13,44 +13,44 @@ export function getStatusMeta(statusValue, halfDayPart) {
       return {
         label: "Holiday",
         shortLabel: "H",
-        pillClassName: "grid-status-pill--holiday",
+        pillClassName: "grid-status-pill-holiday",
       };
     case "BH":
       return {
         label: "Bank Holiday",
         shortLabel: "BH",
-        pillClassName: "grid-status-pill--bankholiday",
+        pillClassName: "grid-status-pill-bankholiday",
       };
     case "NWD":
       return {
         label: "Non-working day",
         shortLabel: "NWD",
-        pillClassName: "grid-status-pill--nonworking",
+        pillClassName: "grid-status-pill-nonworking",
       };
     case "PI":
       return {
         label: "PI (working)",
         shortLabel: "PI",
-        pillClassName: "grid-status-pill--working",
+        pillClassName: "grid-status-pill-working",
       };
     case "HALF":
       return {
         label: "Half-day holiday",
         shortLabel: halfDayPart ? halfDayPart : "HALF",
-        pillClassName: "grid-status-pill--halfday",
+        pillClassName: "grid-status-pill-halfday",
       };
     case "WEEKEND":
       return {
         label: "Weekend",
         shortLabel: "WKND",
-        pillClassName: "grid-status-pill--weekend",
+        pillClassName: "grid-status-pill-weekend",
       };
     case "W":
     default:
       return {
         label: "Working",
         shortLabel: "W",
-        pillClassName: "grid-status-pill--working",
+        pillClassName: "grid-status-pill-sworking",
       };
   }
 }

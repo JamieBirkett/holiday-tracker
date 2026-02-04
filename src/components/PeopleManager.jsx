@@ -156,7 +156,7 @@ function PeopleManager({ people, roleOptions, onPeopleChange }) {
                     </button>
                     <button
                       type="button"
-                      className="people-action-button people-action-button--danger"
+                      className="people-action-button people-action-button-danger"
                       onClick={() => removePerson(person.id)}
                     >
                       Remove

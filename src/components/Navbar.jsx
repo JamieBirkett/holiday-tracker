@@ -4,7 +4,7 @@ import React from "react";
  * Purpose: Top navigation bar.
  * Output: App branding + People/Settings buttons (modals).
  */
-function Header({ activeView, onChangeView, onOpenPeople, onOpenSettings }) {
+function Navbar({ activeView, onChangeView, onOpenPeople, onOpenSettings }) {
   const viewOptions = [
     { viewId: "today", label: "Today" },
     { viewId: "iteration", label: "Iteration" },
@@ -26,7 +26,7 @@ function Header({ activeView, onChangeView, onOpenPeople, onOpenSettings }) {
         </div>
 
         {/* Center: Views */}
-        <nav className="header-center" aria-label="Views">
+        <nav className="nav-views" aria-label="Views">
           <div className="view-tabs">
             {viewOptions.map((viewOption) => (
               <button
@@ -45,10 +45,10 @@ function Header({ activeView, onChangeView, onOpenPeople, onOpenSettings }) {
         </nav>
 
         {/* Right: People / Settings */}
-        <nav className="header-actions" aria-label="Tools">
+        <nav className="nav-tools" aria-label="Tools">
           <button
             type="button"
-            className="utility-button"
+            className="tool-button"
             onClick={onOpenPeople}
             aria-label="Open People manager"
           >
@@ -57,7 +57,7 @@ function Header({ activeView, onChangeView, onOpenPeople, onOpenSettings }) {
 
           <button
             type="button"
-            className="utility-button"
+            className="tool-button"
             onClick={onOpenSettings}
             aria-label="Open Settings"
           >
@@ -69,4 +69,4 @@ function Header({ activeView, onChangeView, onOpenPeople, onOpenSettings }) {
   );
 }
 
-export default Header;
+export default Navbar;
