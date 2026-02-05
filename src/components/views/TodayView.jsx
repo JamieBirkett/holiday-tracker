@@ -29,6 +29,9 @@ function TodayView({ people, overrides, focusDateString, onOpenAddUpdate }) {
             <p className="text-muted">{displayDate(focusDateString)}</p>
           </div>
 
+        
+        </div>
+
           <button
             type="button"
             className="primary-action-button"
@@ -36,7 +39,6 @@ function TodayView({ people, overrides, focusDateString, onOpenAddUpdate }) {
           >
             Add/Update
           </button>
-        </div>
       </header>
 
       <div className="content-card-body">

@@ -1,9 +1,6 @@
 import React from "react";
+import logo from "../assets/logo.png"
 
-/**
- * Purpose: Top navigation bar.
- * Output: App branding + People/Settings buttons (modals).
- */
 function Navbar({ activeView, onChangeView, onOpenPeople, onOpenSettings }) {
   const viewOptions = [
     { viewId: "today", label: "Today" },
@@ -14,9 +11,10 @@ function Navbar({ activeView, onChangeView, onOpenPeople, onOpenSettings }) {
   return (
     <header className="header">
       <div className="container header-layout">
-        {/* Left: Branding */}
+
         <div className="header-brand" aria-label="Holiday Tracker">
-          <div className="headermark" aria-hidden="true" />
+          <img src={logo} className="header-logo" alt="logo" />
+        
           <div>
             <h1 className="header-title">Holiday Tracker</h1>
             <p className="header-subtitle">
@@ -25,7 +23,6 @@ function Navbar({ activeView, onChangeView, onOpenPeople, onOpenSettings }) {
           </div>
         </div>
 
-        {/* Center: Views */}
         <nav className="nav-views" aria-label="Views">
           <div className="view-tabs">
             {viewOptions.map((viewOption) => (
@@ -44,7 +41,6 @@ function Navbar({ activeView, onChangeView, onOpenPeople, onOpenSettings }) {
           </div>
         </nav>
 
-        {/* Right: People / Settings */}
         <nav className="nav-tools" aria-label="Tools">
           <button
             type="button"

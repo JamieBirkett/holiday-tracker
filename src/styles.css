@@ -1,5 +1,5 @@
 :root {
-  /* Skipton-ish teal palette */
+ 
   --color-primary: #41b2d0;
   --color-primary-dark: #1473a9;
   --color-primary-tint: #b7c5c9;
@@ -74,7 +74,6 @@ body {
   box-shadow: var(--focus-ring);
 }
 
-/* Base controls */
 button,
 input,
 select {
@@ -119,6 +118,7 @@ select:focus {
   border-color: var(--color-primary);
   background: var(--color-primary);
   color: #fff;
+
 }
 
 .primary-action-button:hover {
@@ -126,9 +126,7 @@ select:focus {
   background: var(--color-primary-dark);
 }
 
-.secondary-action-button {
-  /* inherits button base */
-}
+
 
 /* Header */
 .header {
@@ -155,13 +153,9 @@ select:focus {
   min-width: 240px;
 }
 
-.headermark {
+.header-logo {
   width: 36px;
   height: 36px;
-  border-radius: var(--radius);
-  background: radial-gradient(circle at 30% 30%, #ffffff 0 25%, #a7dedc 26% 55%, var(--color-primary) 56% 100%);
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow);
 }
 
 .header-title {
@@ -187,10 +181,6 @@ select:focus {
   gap: 8px;
   flex-wrap: wrap;
   justify-content: flex-end;
-}
-
-.tool-button {
-  /* inherits button base */
 }
 
 /* Tabs */
@@ -229,6 +219,8 @@ select:focus {
   align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
+
+  
 }
 
 .content-card-title {
@@ -240,7 +232,7 @@ select:focus {
   padding: 14px;
 }
 
-/* Toolbar row (if used) */
+/* Toolbar row */
 .toolbar-row {
   display: flex;
   align-items: center;
@@ -697,6 +689,7 @@ select:focus {
   .search-filter-grid {
     grid-template-columns: 1fr;
   }
+  
 }
 
 @media (max-width: 700px) {
@@ -715,4 +708,5 @@ select:focus {
   .grid-table-sticky-column {
     min-width: 180px;
   }
+
 }

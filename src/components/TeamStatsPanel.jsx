@@ -5,10 +5,7 @@ import {
   calculateRangeAvailability,
 } from "../lib/coverage.js";
 
-/**
- * Purpose: Show team coverage stats for the active view.
- * Output: Coverage + role availability (weekends excluded, half-day=0.5, PI counts as working).
- */
+
 function TeamStatsPanel({
   activeView,
   people,
@@ -31,12 +28,14 @@ function TeamStatsPanel({
   return (
     <section className="content-card" aria-labelledby="team-stats-title">
       <header className="content-card-header">
+        <div className="content-card-header-row">
         <h2 id="team-stats-title" className="content-card-title">
           Team stats
         </h2>
         <p className="text-muted">
-          Stats exclude weekends • Half-day = 0.5 • PI counts as working
+          Team coverage during the selected range
         </p>
+        </div>
       </header>
 
       <div className="content-card-body">
@@ -70,7 +69,7 @@ function TeamStatsPanel({
                 </div>
 
                 <div className="team-stat">
-                  <div className="team-stat-label">Lowest day</div>
+                  <div className="team-stat-label">Lowest day in range</div>
                   <div className="team-stat-value">
                     {rangeStats.lowestWorkingDateString
                       ? `${rangeStats.lowestWorkingUnits.toFixed(1)} on ${displayDate(rangeStats.lowestWorkingDateString)}`
@@ -104,7 +103,7 @@ function TeamStatsPanel({
           ) : (
             <ul
               className="role-availability-list"
-              aria-label="Average role availability for range"
+              aria-label="Average role availability for date range"
             >
               {rangeStats &&
                 Object.entries(rangeStats.roleAverages)

@@ -10,10 +10,12 @@ function SearchFilterPanel({
   return (
     <section className="content-card" aria-labelledby="search-filter-title">
       <header className="content-card-header">
+        <div className="content-card-header-row">
         <h2 id="search-filter-title" className="content-card-title">
           Search & Filters
         </h2>
         <p className="text-muted">Search by name and filter by role</p>
+        </div>
       </header>
 
       <div className="content-card-body">
@@ -53,15 +55,6 @@ function SearchFilterPanel({
               ))}
             </select>
           </div>
-        </div>
-
-        {/* TODO: Placeholder for future filters */}
-        <div
-          className="filters-placeholder"
-          role="note"
-          aria-label="Filters placeholder"
-        >
-          Filters coming soon (status, show only people off, etc.).
         </div>
       </div>
     </section>
