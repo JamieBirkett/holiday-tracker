@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { toDateString, getWeekStartMonday } from "../lib/date.js";
 
-function SettingsPanel({ settings, onSaveSettings, onResetData }) {
+function SettingsModal({ settings, onSaveSettings, onResetData }) {
   const defaultAnchor = useMemo(
     () => toDateString(getWeekStartMonday(new Date())),
     [],
@@ -125,4 +125,4 @@ function SettingsPanel({ settings, onSaveSettings, onResetData }) {
   );
 }
 
-export default SettingsPanel;
+export default SettingsModal;

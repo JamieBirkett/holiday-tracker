@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 
-function PeopleManager({ people, roleOptions, onPeopleChange }) {
+function PeopleManagerModal({ people, roleOptions, onPeopleChange }) {
   const [newPersonName, setNewPersonName] = useState("");
   const [newPersonRole, setNewPersonRole] = useState("");
   const [editingPersonId, setEditingPersonId] = useState(null);
@@ -228,4 +228,4 @@ function PeopleManager({ people, roleOptions, onPeopleChange }) {
   );
 }
 
-export default PeopleManager;
+export default PeopleManagerModal;

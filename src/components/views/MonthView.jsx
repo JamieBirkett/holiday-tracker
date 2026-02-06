@@ -24,15 +24,15 @@ function MonthView({
             </h2>
             <p className="text-muted">View coverage for a full month</p>
           </div>
-
-          <button
-            type="button"
-            className="primary-action-button"
-            onClick={onOpenAddUpdate}
-          >
-            Add/Update
-          </button>
         </div>
+
+        <button
+          type="button"
+          className="primary-action-button"
+          onClick={onOpenAddUpdate}
+        >
+          Add/Update
+        </button>
       </header>
 
       <div className="content-card-body">

@@ -445,15 +445,23 @@ select:focus {
   background: var(--color-surface);
   font-size: 12px;
 }
+.grid-table{
+  padding: 10px 8px;
 
-.grid-table th,
-.grid-table td {
+}
+.grid-table-weekday-cell, th, td {
   border-right: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
   padding: 10px 8px;
   text-align: center;
   white-space: nowrap;
   background: var(--color-surface);
+  
+}
+.grid-table-weekend-cell {
+  background:#4b556325;
+  border-right: 0;
+  border-bottom: 0;
 }
 
 .grid-table thead th {
@@ -476,9 +484,6 @@ select:focus {
   font-weight: 600;
 }
 
-.grid-table-weekend-cell {
-  background: rgba(0, 0, 0, 0.06);
-}
 
 /* Status pills */
 .grid-status-pill {
@@ -493,7 +498,7 @@ select:focus {
 }
 
 .grid-status-pill-working {
-  background: rgba(65, 178, 208, 0.12);
+  background: rgba(65, 208, 101, 0.12);
 }
 
 .grid-status-pill-nonworking {

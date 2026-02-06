@@ -73,18 +73,18 @@ function GridTable({ people, dateRange, overrides, ariaLabel }) {
                 const weekend = isWeekend(date);
                 const overrideEntry = getOverride(person.id, dateString);
 
-                // Weekend default: grey empty cell (NWD remains a manual option)
-                if (weekend && !overrideEntry) {
+                if (weekend) {
                   return (
                     <td
                       key={dateString}
                       className="grid-table-weekend-cell"
                       aria-label={`${person.name} on ${displayDate(dateString)}: Weekend`}
-                    />
+                    >
+              
+                    </td>
                   );
                 }
 
-                // Default weekday: Working
                 const statusValue = overrideEntry?.status ?? "W";
                 const halfDayPart = overrideEntry?.halfDayPart ?? null;
 
@@ -93,7 +93,7 @@ function GridTable({ people, dateRange, overrides, ariaLabel }) {
                 return (
                   <td
                     key={dateString}
-                    className={weekend ? "grid-table-weekend-cell" : ""}
+                    className={weekend ? "grid-table-weekend-cell" : "grid-table-weekday-cell"}
                   >
                     <span
                       className={`grid-status-pill ${statusMeta.pillClassName}`}

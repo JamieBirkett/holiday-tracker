@@ -42,10 +42,12 @@ function EditForm({ people, onApplyChange }) {
   return (
     <section className="content-card" aria-labelledby="edit-form-title">
       <header className="content-card-header">
+         <div className="content-card-header-row">
         <h2 id="edit-form-title" className="content-card-title">
           Add / Update
         </h2>
         <p className="text-muted">Apply a status across a date range</p>
+        </div>
       </header>
 
       <div className="content-card-body">
@@ -134,15 +136,14 @@ function EditForm({ people, onApplyChange }) {
           </div>
 
           <div className="edit-form-actions">
-            <button className="edit-form-button" type="submit">
+            <button className="edit-form-button" type="submit" title="Apply selected time off">
               Apply
             </button>
           </div>
         </form>
 
         <p className="text-muted text-small" style={{ marginTop: 10 }}>
-          Tip: Use <strong>Default (clear override)</strong> to remove custom
-          entries and return to the default behaviour.
+          Tip: Select required <strong>Status</strong> and book time off using the <strong>Start</strong> and <strong>End</strong> date range.
         </p>
       </div>
     </section>

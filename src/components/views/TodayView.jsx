@@ -29,7 +29,6 @@ function TodayView({ people, overrides, focusDateString, onOpenAddUpdate }) {
             <p className="text-muted">{displayDate(focusDateString)}</p>
           </div>
 
-        
         </div>
 
           <button

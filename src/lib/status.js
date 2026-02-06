@@ -50,7 +50,7 @@ export function getStatusMeta(statusValue, halfDayPart) {
       return {
         label: "Working",
         shortLabel: "W",
-        pillClassName: "grid-status-pill-sworking",
+        pillClassName: "grid-status-pill-working",
       };
   }
 }

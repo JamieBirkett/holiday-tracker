@@ -7,8 +7,8 @@ import IterationView from "./components/views/IterationView.jsx";
 import MonthView from "./components/views/MonthView.jsx";
 import EditForm from "./components/EditForm.jsx";
 import Modal from "./components/Modal.jsx";
-import PeopleManager from "./components/PeopleManager.jsx";
-import SettingsPanel from "./components/SettingsPanel.jsx";
+import PeopleManagerModal from "./components/PeopleManagerModal.jsx";
+import SettingsModal from "./components/SettingsModal.jsx";
 
 import { useAppState } from "./app/useAppState.js";
 import { getRoleOptions, filterPeople } from "./lib/filters.js";
@@ -163,7 +163,7 @@ function App() {
         title="People"
         onClose={() => setIsPeopleOpen(false)}
       >
-        <PeopleManager
+        <PeopleManagerModal
           people={people}
           roleOptions={roleOptions}
           onPeopleChange={setPeople}
@@ -175,7 +175,7 @@ function App() {
         title="Settings"
         onClose={() => setIsSettingsOpen(false)}
       >
-        <SettingsPanel
+        <SettingsModal
           settings={settings}
           onSaveSettings={saveSettings}
           onResetData={resetLocalData}

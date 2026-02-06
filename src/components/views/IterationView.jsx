@@ -24,15 +24,15 @@ function IterationView({
               {displayDate(iterationEndDateString)}
             </p>
           </div>
-
-          <button
-            type="button"
-            className="primary-action-button"
-            onClick={onOpenAddUpdate}
-          >
-            Add/Update
-          </button>
         </div>
+        
+        <button
+          type="button"
+          className="primary-action-button"
+          onClick={onOpenAddUpdate}
+        >
+          Add/Update
+        </button>
       </header>
 
       <div className="content-card-body">
